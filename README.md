@@ -129,3 +129,86 @@ int main()
 	printf("%s", a);
 	return 0;
 }
+
+#define _CRT_SECURE_NO_WARNINGS
+
+//#include<stdio.h>
+//#include<string.h>
+//void pre(char* a)
+//{
+//	int sz = 0;
+//	sz = strlen(a);
+//	int left = 0;
+//	int right = sz - 1;
+//	while (right > left)
+//	{
+//		int  temp = 0;
+//		temp = a[right];
+//		a[right] = a[left];
+//		a[left] = temp;
+//		right--;
+//		left++;
+//	};
+//}
+//int main(){
+//	char arr[100] = { 0 };
+//	gets(arr);
+//	pre(arr);
+//	printf("%s", arr);
+//	return 0;
+//}
+//#include<stdio.h>
+//void print(int n)
+//{
+//	int i = 0;
+//	int j;
+//	for (i = 0; i < n; i++)
+//	{
+//		for (j = 0; j < n - 1 - i; j++)
+//		{
+//			printf(" ");
+//		}
+//		for (j = 0; j < 2*i + 1; j++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//	for (i = 0; i < n - 1; i++)
+//	{
+//		for (j = 0; j < i + 1; j++)
+//		{
+//			printf(" ");
+//		}
+//		for (j = 0; j < 2 * n - 3 - 2 * i; j++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//}
+//int main()
+//{
+//	int n;
+//	scanf("%d", &n);
+//	print(n);
+//	return 0;
+//}
+#include<stdio.h>
+
+int main()
+{
+	int money=0;
+	int empty = 0;
+	scanf("%d", &money);
+	int total = 0;
+	total+= money;
+	empty = money;
+	while (empty >= 2)
+	{
+		total += empty / 2;
+		empty = empty / 2 + empty % 2;
+	}
+	printf("%d", total);
+	return 0;
+}
