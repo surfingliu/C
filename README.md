@@ -212,3 +212,38 @@ int main()
 	printf("%d", total);
 	return 0;
 }
+#include<stdio.h>
+int main()
+{
+	int  b, c;
+	int a = 1;
+	while (a)
+	{
+		scanf("%d %d %d", &a, &b, &c);
+		if ((a + b <= c) || (a + c <= b) || (b + c <= a))
+		{
+			printf("Not a triangle!");
+			printf("\n");
+		}
+		else
+		{
+			if (a == b && a == c)
+			{
+				printf("Equilateral triangle!");
+				printf("\n");
+			}
+			else if (a == b || a == c || b == c)
+			{
+				printf("Isosceles triangle!");
+				printf("\n");
+			}
+			else 
+			{
+				printf("Ordinary triangle!");
+				printf("\n");
+			}
+		}
+		
+	}
+	return 0;
+}
