@@ -247,3 +247,97 @@ int main()
 	}
 	return 0;
 }
+//#include<stdio.h>
+//int main()
+//{
+//	int i, j;
+//	int temp;
+//	int arr[8] = { 2,3,5,7,4,1,5,7 };
+//	for (i = 0; i < 7; i++)
+//	{
+//		for (j = 0; j < 7 - i; j++)
+//		{
+//			if (arr[j] > arr[j + 1])
+//			{
+//				temp = arr[j];
+//				arr[j] = arr[j + 1];
+//				arr[j + 1] = temp;
+//			}
+//		}
+//	}
+//	for (i = 0; i < 8; i++)
+//	{
+//		printf("%d", arr[i]);
+//	}
+//	return 0;
+//
+//		
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int arr1[5] = { 1,2,3,4,5 };
+//	int arr2[5] = { 6,7,8,9,10 };
+//	int i;
+//	
+//	for (i = 0; i < 5; i++)
+//	{
+//		arr1[i] = arr1[i] ^ arr2[i];
+//		arr2[i] = arr1[i] ^ arr2[i];
+//		arr1[i] = arr1[i] ^ arr2[i];
+//	}
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%d", arr1[i]);
+//	}
+//	printf("\n");
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%d", arr2[i]);
+//	}
+//	return 0;
+//}
+#include<stdio.h>
+void init(int arr[])
+{
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		arr[i] = 0;
+	}
+}
+void print(int arr[])
+{
+	int i;
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d", arr[i]);
+	}
+	printf("\n");
+}
+void reverse(int arr[])
+{
+	int i;
+	int temp;
+	for (i = 0; i < 5; i++)
+	{
+		temp = arr[i];
+		arr[i] = arr[9 - i];
+		arr[9 - i] = temp;
+	}
+}
+int main()
+{
+	int i;
+	int arr[10] = { 1 };
+	init(arr);
+	print(arr);
+	for (i = 0; i < 10; i++)
+	{
+		arr[i] = i;
+	}
+	print(arr);
+	reverse(arr);
+	print(arr);
+	return 0;
+}
