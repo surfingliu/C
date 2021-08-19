@@ -742,4 +742,96 @@ void testQueue(Queue Q)
     printf("\n\n");
 }
 
+#define  _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//int main()
+//{
+//	int a, b;
+//	int i;
+//	int count=0;
+//	int m, n;
+//	scanf("%d %d", &a, &b);
+//	for (i = 0; i < 32; i++)
+//	{
+//		m = a & 1;
+//		n = b & 1;
+//		if (m == n)
+//		{
+//			count++;
+//		}
+//		a=a >> 1;
+//		b = b >> 1;
+//	}
+//	printf("%d", 32-count);
+//	return 0;
+//
+//#include<stdio.h>
+//int main()
+//{
+//	int number;
+//	int a,b;
+//	scanf("%d", &number);
+//	a = number;
+//	b = number;
+//	int i;
+//	int arr1[16] = { 0 };
+//	int arr2[16] = { 0 };
+//	for (i = 0; i < 16; i++)
+//	{
+//		if ((a & 1) == 1)
+//		{
+//			arr1[i] = 1;
+//		}
+//		a = a >> 2;
+//	}
+//	b = b >> 1;
+//	for (i = 0; i < 16; i++)
+//	{
+//	
+//		if ((b & 1) == 1)
+//		{
+//			arr2[i] = 1;
+//		}
+//		b = b >> 2;
+//	}
+//	for (i = 0; i < 16; i++)
+//	{
+//		printf("%d", arr1[i]);
+//	}
+//	printf("\n");
+//	for (i = 0; i < 16; i++)
+//	{
+//		printf("%d", arr2[i]);
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int a;
+//	scanf("%d", &a);
+//	int count = 0;
+//	int i;
+//	for (i = 0; i < 32; i++)
+//	{
+//		if ((a & 1) == 1)
+//		{
+//			count++;
+//		}
+//		a = a >> 1;
+//	}
+//	printf("%d", count);
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//int a, b;
+//scanf("%d %d", &a, &b);
+//a = a ^ b;
+//b = a ^ b;
+//a = a ^ b;
+//printf("%d %d", a, b);
+//return 0;
+//}
 
