@@ -834,4 +834,67 @@ void testQueue(Queue Q)
 //printf("%d %d", a, b);
 //return 0;
 //}
+#include <stdio.h>
+#include <stdlib.h>
+#define N 10000
+
+int a[N]; // 用于存储奶牛产奶量
+
+//Todo
+//需要返回中位数奶牛产奶量。
+//可以自行添加其他辅助函数,可以修改传参的数量
+int solve1(int *a,int n){
+	int i,j,temp,mid;
+	if(n==1)
+	{
+		return a[0];
+	}//如果n为1则返回第一个值 
+	else{
+for(i=1;i<n;i++)
+{
+	for(j=0;j<n-i;j++)
+	{
+		if(a[j]>a[j+1])
+		{
+			temp=a[j+1];
+			a[j+1]=a[j];
+			a[j]=temp;
+		}
+	}
+}//冒泡排序 
+if(n%2==0)
+{
+	mid=(a[n/2]+a[n/2+1])/2;	
+}
+else
+{
+	mid=a[n/2];
+}
+return mid;
+}}
+void test1(){
+    int caseNum; //表示测试轮数
+    int n;
+    int ans[N];
+    if (freopen("5_1_input_5.in", "r", stdin) == NULL) {
+		printf("There is an error in reading file 5_1_input_5.in");
+    }
+    scanf("%d", &caseNum);
+    for (int case1 = 0; case1 < caseNum; case1++) {
+        printf("==== Case %d ====\n", case1 + 1);
+        scanf("%d", &n);
+        for (int i = 0; i < n; i++) {
+            scanf("%d", &a[i]);
+        }
+        ans[case1] = solve1(a,n);
+        printf("ans is:%d\n", ans[case1]);
+        printf("\n");
+    }
+    fclose(stdin);
+}
+
+int main() {
+    test1();
+    return 0;
+}
 
