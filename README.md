@@ -911,3 +911,41 @@ int main()
 	return 0;
 
 }
+#include<stdio.h>
+void test()
+{
+	printf("hehe\n");
+}
+int main()
+{
+	int arr[10] = { 0 };
+	test();
+	int i;
+	for (i = 0; i < 10; i++)
+	{
+		arr[i] = i;
+	}
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	return 0;
+}
+//void test1()
+//{
+//	printf("haha\n");
+//}
+//void test2()
+//{
+//	test1();
+//}
+//void test3()
+//{
+//	test2();
+//}
+//int main()
+//{
+//	test1();
+//	test3();
+//	return 0;
+//}
