@@ -949,3 +949,80 @@ int main()
 //	test3();
 //	return 0;
 //}
+//#include<stdio.h>
+//int main()
+//{
+//	int arr1[] = { 1,2,3,4,5 };
+//	int arr2[] = { 2,3,4,5,6 };
+//	int arr3[] = { 3,4,5,6,7 };
+//	int* arr4[] = {arr1,arr2,arr3};
+//	int i,j;
+//	for (i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 5; j++)
+//		{
+//			printf("%d ", arr4[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//void print1(int* p, int sz)
+//{
+//	int i;
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", *(p + i));
+//	}
+//}
+//void print2(int(*p)[10], int sz)
+//{
+//	int i;
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", *(*p + i));
+//	}
+//}
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,0 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	print1(arr, sz);
+//	printf("\n");
+//	print2(&arr, sz);
+//	return 0;
+//}
+#include<stdio.h>
+void print1(int arr[3][5], int r, int c)
+{
+	int i, j;
+	for (i = 0; i < r; i++)
+	{
+		for (j = 0; j < c; j++)
+		{
+			printf("%d ", arr[i][j]);
+		}
+		printf("\n");
+	}
+}
+void print2(int(*p)[5], int r, int c)
+{
+	int i, j;
+	for (i = 0; i < r; i++)
+	{
+		for (j = 0; j < c; j++)
+		{
+			printf("%d ", *(*(p + i) + j));
+		}
+		printf("\n");
+	}
+}
+int main()
+{
+	int arr[3][5] = { 1,2,3,4,5,2,3,4,5,6,3,4,5,6,7 };
+	print1(arr, 3, 5);
+	printf("\n\n");
+	print2(arr, 3, 5);
+	return 0;
+}
