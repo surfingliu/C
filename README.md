@@ -1046,3 +1046,85 @@ int main()
 	printf("%d", ret);
 	return 0;
 }
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+int add(int a, int b)
+{
+	return a + b;
+}
+int sub(int a, int b)
+{
+	return a - b;
+}
+int mul(int a, int b)
+{
+	return a * b;
+}
+int div(int a, int b)
+{
+	return a / b;
+}
+void calc(int (*p)(int, int))
+{
+	int a, b, ret;
+	scanf("%d %d", &a, &b);
+	ret = (*p)(a, b);
+	printf("%d\n", ret);
+}
+void menu()
+{
+	printf("**1.add***\n");
+	printf("**2.sub***\n");
+	printf("**3.mul***\n");
+	printf("**4.piv***\n");
+	printf("**0.exit**\n");
+}
+int main()
+{
+	int input = 0;
+	menu();
+	do {
+		printf("please input your choice!\n");
+		scanf("%d", &input);
+		int a, b, ret;
+		switch (input)
+		{
+		case 1:calc(add);
+			break;
+		case 2:calc(sub);
+			break;
+		case 3:calc(mul);
+			break;
+		case 4:calc(div);
+			break;
+		case 0:printf("exit!");
+			break;
+		default:printf("error!\n");
+			break;
+		}
+	} while (input);
+	return 0;
+}
+//	int (*p[5])(int, int) = { 0,add,sub,mul,div };
+//	do {
+//		scanf("%d", &input);
+//		if (input == 0)
+//		{
+//			printf("exit\n");
+//			break;
+//		}
+//		else if (input >= 1 && input <= 4)
+//		{
+//			int a, b, ret;
+//			scanf("%d %d", &a, &b);
+//			ret = (*p[input])(a, b);
+//			printf("%d\n", ret);
+//		}
+//		else
+//		{
+//			printf("error!\n");
+//		}
+//	} while (input);
+//	return 0;
+//}
