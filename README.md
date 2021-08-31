@@ -1026,3 +1026,23 @@ int main()
 	print2(arr, 3, 5);
 	return 0;
 }
+#include<stdio.h>
+int add(int a, int b);
+int add(int a, int b)
+{
+	return a + b;
+}
+//int main()
+//{
+//	printf("%p\n", add);
+//	printf("%p", &add);
+//}
+int main()
+{
+	int (*p)(int, int) = add;
+	int ret = add(2, 3);
+	printf("%d\n", ret);
+	ret = (*p)(2, 3);
+	printf("%d", ret);
+	return 0;
+}
