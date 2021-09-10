@@ -1257,3 +1257,38 @@ int main()
 	printf("%s\n", cpp[-1][-1] + 1);
 	return 0;
 }
+int main()
+{
+	/*char k = '0';
+	for (k = 'A'; k <= 'D'; k++)
+	{
+		if ((k != 'A') + (k == 'C') + (k == 'D') + (k != 'D') == 3)
+		{
+			break;
+		}
+	}
+	printf("killer is %c", k);*/
+	int a, b, c, d, e;
+	for (a = 1; a < 6; a++) {
+		for (b = 1; b < 6; b++)
+		{
+			for (c = 1; c < 6; c++)
+			{
+				for (d = 1; d < 6; d++)
+				{
+					for (e = 1; e < 6; e++)
+					{
+						if (((b == 2) + (a == 3)) == 1 && ((b == 2) + (e == 4)) == 1 && ((c == 1) + (d == 2)) == 1 && ((d == 3) + (c == 5)) == 1 && ((e == 4) + (a == 1)) == 1)
+						{
+							if (a * b * c * d * e == 120)
+							{
+								printf("a=%d,b=%d,c=%d,d=%d,e=%d", a, b, c, d, e);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	return 0;
+}
